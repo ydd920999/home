@@ -20,7 +20,7 @@
     <!-- 一言内容 -->
     <div class="content" @click="updateHitokoto">
       <span class="text">{{ hitokotoData.text }}</span>
-      <span class="from">-「&nbsp;{{ hitokotoData.from }}&nbsp;」</span>
+      <span class="from">-「&nbsp;{{ hitokotoData.author }}&nbsp;」</span>
     </div>
   </div>
 </template>
@@ -39,15 +39,15 @@ const openMusicShow = ref(false);
 // 一言数据
 const hitokotoData = reactive({
   text: "这里应该显示一句话",
-  from: "無名",
+  author: "毅帝帝",
 });
 
 // 获取一言数据
 const getHitokotoData = () => {
   getHitokoto()
     .then((res) => {
-      hitokotoData.text = res.hitokoto;
-      hitokotoData.from = res.from;
+      hitokotoData.text = res.data.hitokoto;
+      hitokotoData.author = res.data.source;
     })
     .catch(() => {
       ElMessage({
@@ -63,7 +63,7 @@ const getHitokotoData = () => {
 // 更新一言数据
 const updateHitokoto = () => {
   hitokotoData.text = "新的一言正在赶来的路上";
-  hitokotoData.from = "来源加载中";
+  hitokotoData.author = "来源加载中";
   // 防抖
   debounce(() => {
     getHitokotoData();
