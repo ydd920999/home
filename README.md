@@ -1,21 +1,13 @@
 简体中文 | [English](./README_EN.md)
 
 <p>
-<strong><h2>無名の主页</h2></strong>
-简单的小主页，原来的看够了，重新弄了一个
-</p>
-
-![無名の主页](https://s2.loli.net/2022/07/14/K5JigfvDoNewtuS.webp)
-
->主页的 Logo 字体已经过压缩，若用本站 Logo 以外的字母会变回默认字体，这里是 [完整字体](https://file.imsyy.top/font/Other/Pacifico-Regular.ttf)
+<strong><h2>毅帝帝の主页</h2>
 
 ### Demo
 
->由于 CDN 缓存原因，查看最新效果可能需要 `Ctrl` + `F5` 强制刷新浏览器缓存
+> 由于 CDN 缓存原因，查看最新效果可能需要 `Ctrl` + `F5` 强制刷新浏览器缓存
 
-- [無名の主页](https://www.imsyy.top)
-- [無名の主页 - Dev](https://home-imsyy.vercel.app)
-- [無名の主页 - 备用线路](https://home-5iw.pages.dev)
+- [毅帝帝の主页](https://home.yddwd.com)
 
 ### 功能
 
@@ -30,13 +22,13 @@
 
 ### 部署
 
-* **安装** [node.js](https://nodejs.org/zh-cn/) **环境**
+- **安装** [node.js](https://nodejs.org/zh-cn/) **环境**
 
   > node > 16.16.0  
   > npm > 8.15.0
-  
-* 然后以 **管理员权限** 运行 `cmd` 终端，并 `cd` 到 项目根目录
-* 在 `终端` 中输入：
+
+- 然后以 **管理员权限** 运行 `cmd` 终端，并 `cd` 到 项目根目录
+- 在 `终端` 中输入：
 
 ```bash
 # 安装 pnpm
@@ -51,6 +43,7 @@ pnpm dev
 # 构建
 pnpm build
 ```
+
 > 构建完成后，静态资源会在 **`dist` 目录** 中生成，可将 **`dist` 文件夹下的文件**上传至服务器，也可使用 `Vercel` 等托管平台一键导入并自动部署
 
 ### 网站链接
@@ -59,9 +52,9 @@ pnpm build
 
 ```json
 {
-  "icon": "Blog",						
-  "name": "博客",						
-  "link": "https://blog.imsyy.top/"	
+  "icon": "Blog",
+  "name": "博客",
+  "link": "https://blog.yddwd.com/"
 },
 ```
 
@@ -107,11 +100,10 @@ const siteIcon = {
 
 也可自行更换其他方式
 
-
 ### 音乐
 
->本项目采用了基于 `MetingJS` 的 `Aplayer` 音乐播放器，可实现快速自定义歌单  
->*仅支持 **中国大陆地区**
+> 本项目采用了基于 `MetingJS` 的 `Aplayer` 音乐播放器，可实现快速自定义歌单  
+> \*仅支持 **中国大陆地区**
 
 请在 `.env` 文件中更改歌曲相关参数即可实现自定义歌单列表
 
@@ -130,14 +122,14 @@ VITE_SONG_ID = "7452421335"
 
 现采用 `HarmonyOS Sans` 开源字体，采用字体拆分，提升加载速度
 
->由于本站 `CDN` 已开启防盗链，**非本站域名不可访问**，请将字体引入链接更改为下方内容，否则 **自定义字体将失效**
+> 由于本站 `CDN` 已开启防盗链，**非本站域名不可访问**，请将字体引入链接更改为下方内容，否则 **自定义字体将失效**
 >
->`https://s1.hdslb.com/bfs/static/jinkela/long/font/regular.css`
+> `https://s1.hdslb.com/bfs/static/jinkela/long/font/regular.css`
 
 <details>
 <summary>旧版方式</summary>
 
->由于本项目引入了中文字体，需要压缩中文字体以提高网页加载速度（ 也可以取消使用中文字体 ）
+> 由于本项目引入了中文字体，需要压缩中文字体以提高网页加载速度（ 也可以取消使用中文字体 ）
 
 #### 中文字体去除繁体
 
@@ -165,7 +157,7 @@ make clean all
 
 - 最终可对原字体进行缓加载，**先行加载压缩后的字体**
 
->详细信息可前往 [虹墨空间站](https://www.imaegoo.com/2020/chinese-font-compress/) 查看原文
+> 详细信息可前往 [虹墨空间站](https://www.imaegoo.com/2020/chinese-font-compress/) 查看原文
 
 </details>
 
@@ -178,12 +170,9 @@ make clean all
 如果想要添加更多的本地图片作为网站背景，可以将图片重命名 `background+数字` 的形式，并在 `src/components/Background/index.vue` 中进行修改：
 
 ```js
-
 if (type == 0) {
   // 修改此处 Math.random() 后面的第一个数字为图片的数量
-  bgUrl.value = `/images/background${Math.floor(
-    Math.random() * 10 + 1
-  )}.webp`;
+  bgUrl.value = `/images/background${Math.floor(Math.random() * 10 + 1)}.webp`;
 }
 ```
 
@@ -193,23 +182,18 @@ if (type == 0) {
 
 ### 技术栈
 
-* [Vue](https://cn.vuejs.org/)
-* [Vite](https://vitejs.cn/vite3-cn/)
-* [Pinia](https://pinia.vuejs.org/zh/)
-* [IconPark](https://iconpark.oceanengine.com/official)
-* [xicons](https://xicons.org/)
-* [Aplayer](https://aplayer.js.org/)
+- [Vue](https://cn.vuejs.org/)
+- [Vite](https://vitejs.cn/vite3-cn/)
+- [Pinia](https://pinia.vuejs.org/zh/)
+- [IconPark](https://iconpark.oceanengine.com/official)
+- [xicons](https://xicons.org/)
+- [Aplayer](https://aplayer.js.org/)
 
 ### API
 
-* [小歪 API](https://api.aixiaowai.cn)
-* [搏天 API](https://api.btstu.cn/doc/sjbz.php)
-* [高德开放平台](https://lbs.amap.com/)
-* [Hitokoto 一言](https://hitokoto.cn/)
-* [MetingAPI By 武恩赐](https://api.wuenci.com/meting/api/)
-* 
-## Star History
+- [小歪 API](https://api.aixiaowai.cn)
+- [搏天 API](https://api.btstu.cn/doc/sjbz.php)
+- [高德开放平台](https://lbs.amap.com/)
+- [TenAPI 一言](https://docs.tenapi.cn/)
 
-[![Star History Chart](https://api.star-history.com/svg?repos=imsyy/home&type=Date)](https://star-history.com/#imsyy/home&Date)
-
-<a title="SSL" target="_blank" href="https://myssl.com/seal/detail?domain=blog.imsyy.top"><img src="https://img.shields.io/badge/MySSL-安全认证-brightgreen"></a>&nbsp;<a title="CDN" target="_blank" href="https://cdnjs.com/"><img src="https://img.shields.io/badge/CDN-Cloudflare-blue"></a>&nbsp;<a title="Copyright" target="_blank" href="https://imsyy.top/"><img src="https://img.shields.io/badge/Copyright%20%C2%A9%202020--2023-%E7%84%A1%E5%90%8D-red"></a>
+<a title="SSL" target="_blank" href="https://myssl.com/seal/detail?domain=blog.imsyy.top"><img src="https://img.shields.io/badge/MySSL-安全认证-brightgreen"></a>&nbsp;<a title="CDN" target="_blank" href="https://cdnjs.com/"><img src="https://img.shields.io/badge/CDN-Cloudflare-blue"></a>&nbsp;</a>

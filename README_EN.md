@@ -132,6 +132,7 @@ make clean all
 
 ### API
 
+- [小歪 API](https://api.aixiaowai.cn)
 - [搏天 API](https://api.btstu.cn/doc/sjbz.php)
 - [高德开放平台](https://lbs.amap.com/)
 - [TenAPI 一言](https://docs.tenapi.cn/)
